@@ -1,0 +1,37 @@
+<div id="ingredient-wrapper">
+
+  <div id="ingredient-list-menu">
+
+
+    <div id="ingredient-list-panel">
+      <button (click)="changeBehaviouralMessage()">Change Behavioral Message</button>
+      <button (click)="changeReplayMessages()">Change Replay Message</button>
+      <button (click)="callChildMethod()">Call Child Method</button>
+      <button (click)="changeChildMessage()">Change Child Message</button>
+    </div>
+  </div>
+
+
+  <div id="ingredients-added-list">
+    ADDED INGREDIENTS:
+    <div *ngFor="let i of addedIngredients">
+      <ul>
+        <li>{{ i.name | capitalize }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="ingredients-grid-list">
+    <div *ngFor="let i of ingredients">
+      <ingredient-component [ingredient]="i" (ingredientAdded)="receivedIngredients($event)">
+        <p>This is content from ng-container</p>
+      </ingredient-component>
+    </div>
+  </div>
+</div>
+
+<!--<tr *ngFor="let r of recipes">-->
+<!--  <td>{{r.name}}</td>-->
+<!--</tr>-->
+<!--<p>The error is: {{errorMessageForIngredients}}</p>-->
+<!--<p>The error is: {{errorMessageForIngredients}}</p>-->

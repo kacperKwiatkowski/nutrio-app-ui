@@ -1,0 +1,22 @@
+<div id="behavioural-message"> Subject message / Subscriber 1: {{subjectMessage1}}</div>
+<div id="behavioural-message"> Subject message / Subscriber 2: {{subjectMessage2}}</div>
+<div id="behavioural-message"> Subject message / Subscriber 3: {{subjectMessage3}}</div>
+<div id="behavioural-message"> Subject message / Subscriber 4: {{subjectMessage4}}</div>
+<input type="text" [(ngModel)]="inputMessage">
+<div id="behavioural-message"> Shared behavioural message: {{behaviouralMessage}}</div>
+
+<div id="replay-message" >
+  Shared replay messages:
+  <div *ngFor="let replayMessage of replayMessages">
+    {{ replayMessage }}
+  </div>
+</div>
+
+<div id="behavioural-message"> Shared async message: {{asyncMessage}}</div>
+
+<button (click)="alertSubject()">Alert Subject</button>
+<button (click)="activateSubjectSubscriber()">Activate Subject</button>
+<button (click)="alertBehaviouralSubject()">Alert Behaviour Subject</button>
+<button (click)="alertReplaySubject()">Alert Replay Behaviour</button>
+<button (click)="updateAsyncSubject()">Update Async Behaviour</button>
+<button (click)="completeAsyncBehaviour()">Complete Async Behaviour</button>

@@ -1,0 +1,14 @@
+<div id="ingredient-card">
+  <p>This ingredient name is: {{ingredient.name}}</p>
+  <p>This ingredient weight is: {{ingredient.weight}}</p>
+  <p>This ingredient fat is: {{ingredient.fat}}</p>
+  <p>This ingredient carbohydrates is: {{ingredient.carbohydrates}}</p>
+  <p>This ingredient protein is: {{ingredient.protein}}</p>
+  <button (click)="addIngredient(ingredient)">Add</button>
+
+  <p>Child works! Message: {{ message }}</p>
+
+  <br>
+  <ng-content></ng-content>
+</div>
+
