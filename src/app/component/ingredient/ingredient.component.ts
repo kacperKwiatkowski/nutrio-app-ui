@@ -4,6 +4,7 @@ import {Ingredient} from "../../model/Ingredient";
 @Component({
   selector: 'ingredient-component',
   templateUrl: './ingredient.component.html',
+  standalone: true,
   styleUrls: ['./ingredient.component.sass']
 })
 export class IngredientComponent {

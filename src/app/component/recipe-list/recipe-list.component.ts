@@ -4,6 +4,7 @@ import {SharedDataService} from "../../service/shared-data.service";
 @Component({
   selector: 'recipe-list-component',
   templateUrl: './recipe-list.component.html',
+  standalone: true,
   styleUrls: ['./recipe-list.component.sass']
 })
 export class RecipeListComponent implements OnInit {

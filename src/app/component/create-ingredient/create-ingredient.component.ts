@@ -1,11 +1,18 @@
 import { Component } from '@angular/core';
-import {FormBuilder, FormGroup, NgForm, Validators} from "@angular/forms";
+import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {map, Observable, startWith} from "rxjs";
 import {SharedDataService} from "../../service/shared-data.service";
+import {AsyncPipe, CommonModule} from "@angular/common";
 
 @Component({
   selector: 'create-ingredient-component',
   templateUrl: './create-ingredient.component.html',
+  standalone: true,
+  imports: [
+    AsyncPipe,
+    ReactiveFormsModule,
+    CommonModule
+  ],
   styleUrls: ['./create-ingredient.component.sass']
 })
 export class CreateIngredientComponent {

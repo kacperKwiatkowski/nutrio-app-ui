@@ -10,17 +10,19 @@
       Name:
       <input type="text" formControlName="name">
     </label>
-    <div *ngIf="!(nameValid$ | async) && myForm.get('name')?.touched">
+
+    @if ( !(nameValid$ | async) && myForm.get('name')?.touched){
       Name is required and must be at least 3 characters.
-    </div>
+    }
 
     <label>
       Weight:
       <input type="text" formControlName="weight">
     </label>
-    <div *ngIf="!(weightValid$ | async) && myForm.get('weight')?.touched">
+
+    @if ( !(weightValid$ | async) && myForm.get('weight')?.touched){
       Enter a valid weight.
-    </div>
+    }
 
     <button type="submit" [disabled]="!(formValid$ | async)">Submit</button>
   </form>

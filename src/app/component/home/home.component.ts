@@ -1,10 +1,15 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {SharedDataService} from "../../service/shared-data.service";
 import {scan} from "rxjs";
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
+  standalone: true,
+  imports: [
+    FormsModule
+  ],
   styleUrls: ['./home.component.sass']
 })
 export class HomeComponent implements OnInit {
